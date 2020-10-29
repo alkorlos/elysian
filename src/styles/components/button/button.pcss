@@ -1,0 +1,31 @@
+.button {
+	display: block;
+	padding: 14px 39px;
+
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 19px;
+	font-family: inherit;
+	text-decoration: none;
+
+	border: none;
+	border-radius: 24px;
+	cursor: pointer;
+
+	transition: 0.3s;
+	&:focus:not(:focus-visible) {
+		outline: 0;
+	}
+	@media (--phone) {
+		padding: 12px 32px;
+	}
+}
+
+.button_dark {
+	background-color: #434984;
+	&:hover {
+		@media (hover: hover), (pointer: fine) {
+			background-color: #3b417c;
+		}
+	}
+}

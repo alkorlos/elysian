@@ -1,0 +1,80 @@
+.menu-form {
+	position: relative;
+	z-index: 11;
+
+	display: none;
+	flex-basis: 25px;
+	@media (--tablet) {
+		display: block;
+	}
+}
+
+.menu-form__button {
+	position: relative;
+
+	display: block;
+	width: 25px;
+	height: 20px;
+	padding: 0;
+
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	&:focus:not(:focus-visible) {
+		outline: 0;
+	}
+}
+
+.menu-form__button-inner {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 0;
+
+	display: block;
+	height: 3px;
+
+	background-color: #ffffff;
+	border-radius: 2px;
+
+	transition: 0.3s;
+	&::before,
+	&::after {
+		position: absolute;
+		left: 0;
+
+		display: block;
+		width: 100%;
+		height: 3px;
+
+		background-color: #ffffff;
+		border-radius: 2px;
+
+		transition: 0.3s;
+		content: "";
+	}
+	&::before {
+		top: -8px;
+
+		transition-property: top, transform;
+	}
+	&::after {
+		bottom: -8px;
+
+		transition-property: bottom, transform;
+	}
+}
+
+.menu-form__button_active .menu-form__button-inner {
+	background: transparent;
+	&::before {
+		top: 0;
+
+		transform: rotate(45deg);
+	}
+	&::after {
+		bottom: 0;
+
+		transform: rotate(-45deg);
+	}
+}

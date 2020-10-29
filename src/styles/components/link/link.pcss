@@ -1,0 +1,26 @@
+.link {
+	display: inline-block;
+	padding: 14px 39px;
+
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 19px;
+	text-decoration: none;
+
+	border-radius: 24px;
+	cursor: pointer;
+
+	transition: 0.3s;
+	@media (--phone) {
+		padding: 12px 32px;
+	}
+}
+
+.link_dark {
+	background-color: #434984;
+	&:hover {
+		@media (hover: hover), (pointer: fine) {
+			background-color: #3b417c;
+		}
+	}
+}

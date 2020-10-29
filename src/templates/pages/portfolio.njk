@@ -1,0 +1,168 @@
+{% extends "_layout.njk" %}
+
+{% block inspection %}
+	{# <div class="inspection inspection-portfolio"></div> #}
+{% endblock %}
+
+{% block content %}
+	<main class="container">
+		<section class="hero section_hero section" aria-labelledby="hero__title">
+			<div class="central">
+				<div class="hero__content">
+					<h1 class="hero__title" id="hero__title">Our Projects</h1>
+
+					<div class="hero__text">
+						<p class="hero__paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+							ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et&nbsp;magnis dis parturient montes,
+							nascetur ridiculus mus.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="partners section_partners_portfolio section" aria-labelledby="partners__title">
+			<div class="central">
+				<h2 class="visually-hidden" id="partners__title">Partners cards</h2>
+
+				<ul class="partners-cards">
+					<li class="partner-card">
+						<picture class="partner-card__picture">
+							<source srcset="images/portfolio-nasa.webp 1x, images/portfolio-nasa@2x.webp 2x" type="image/webp">
+							<img class="partner-card__image"
+								src="images/portfolio-nasa.jpg"
+								srcset="images/portfolio-nasa@2x.jpg 2x"
+								width="643"
+								height="740"
+								alt="nasa">
+						</picture>
+						<div class="partner-card__logo-wrapper">
+							<svg class="partner-card__logo svg" width="81" height="81" role="img" aria-label="semantics">
+								<use xlink:href="svg/sprite.svg#partners-semantics" aria-hidden="true"></use>
+							</svg>
+						</div>
+						<div class="partner-card__body">
+							<div class="partner-card__text">
+								<h2 class="partner-card__title">
+									<a class="partner-card__link" href="#">NASA Goddard Space Flight Center</a>
+								</h2>
+								<p class="partner-card__paragraph">Multithreaded data processing and graphing architecture for capturing
+									and monitoring spacecraft data streams
+								</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="partner-card">
+						<picture class="partner-card__picture">
+							<source srcset="images/portfolio-facebook.webp 1x, images/portfolio-facebook@2x.webp 2x" type="image/webp">
+							<img class="partner-card__image"
+								src="images/portfolio-facebook.jpg"
+								srcset="images/portfolio-facebook@2x.jpg 2x"
+								width="643"
+								height="840"
+								alt="facebook">
+						</picture>
+						<div class="partner-card__logo-wrapper">
+							<svg class="partner-card__logo svg" width="81" height="81" role="img" aria-label="device-access">
+								<use xlink:href="svg/sprite.svg#partners-device-access" aria-hidden="true"></use>
+							</svg>
+						</div>
+						<div class="partner-card__body">
+							<div class="partner-card__text">
+								<h2 class="partner-card__title">
+									<a class="partner-card__link" href="#">Transitwise</a>
+								</h2>
+								<p class="partner-card__paragraph">A&nbsp;public transport navigation app for developing countries,
+									operating in&nbsp;South Africa. Featured on&nbsp;national television, radio, and print.
+								</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="partner-card">
+						<picture class="partner-card__picture">
+							<source srcset="images/portfolio-singapore.webp 1x, images/portfolio-singapore@2x.webp 2x" type="image/webp">
+							<img class="partner-card__image"
+								src="images/portfolio-singapore.jpg"
+								srcset="images/portfolio-singapore@2x.jpg 2x"
+								width="643"
+								height="704"
+								alt="singapore">
+						</picture>
+						<div class="partner-card__logo-wrapper">
+							<svg class="partner-card__logo svg" width="81" height="81" role="img" aria-label="multimedia">
+								<use xlink:href="svg/sprite.svg#partners-multimedia" aria-hidden="true"></use>
+							</svg>
+						</div>
+						<div class="partner-card__body">
+							<div class="partner-card__text">
+								<h2 class="partner-card__title">
+									<a class="partner-card__link" href="#">Gardens By&nbsp;The Bay</a>
+								</h2>
+								<p class="partner-card__paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+									commodo ligula eget dolor. Aenean massa. Cum sociis natoque spenatibus et&nbsp;magnis dis parturient
+									montes, nascetur ridiculus mus.
+								</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="partner-card">
+						<picture class="partner-card__picture">
+							<source srcset="images/portfolio-brown-university.webp 1x, images/portfolio-brown-university@2x.webp 2x" type="image/webp">
+							<img class="partner-card__image"
+								src="images/portfolio-brown-university.jpg"
+								srcset="images/portfolio-brown-university@2x.jpg 2x"
+								width="643"
+								height="1025"
+								alt="brown university">
+						</picture>
+						<div class="partner-card__logo-wrapper">
+							<svg class="partner-card__logo svg" width="81" height="81" role="img" aria-label="offline-storage">
+								<use xlink:href="svg/sprite.svg#partners-offline-storage" aria-hidden="true"></use>
+							</svg>
+						</div>
+						<div class="partner-card__body">
+							<div class="partner-card__text">
+								<h2 class="partner-card__title">
+									<a class="partner-card__link" href="#">Moviebench</a>
+								</h2>
+								<p class="partner-card__paragraph">The world&rsquo;s largest repository for human voice recognition
+									backed by&nbsp;Brown University.
+								</p>
+							</div>
+						</div>
+					</li>
+
+					<li class="partner-card">
+						<picture class="partner-card__picture">
+							<source srcset="images/portfolio-google.webp 1x, images/portfolio-google@2x.webp 2x" type="image/webp">
+							<img class="partner-card__image"
+								src="images/portfolio-google.jpg"
+								srcset="images/portfolio-google@2x.jpg 2x"
+								width="643"
+								height="635"
+								alt="google">
+						</picture>
+						<div class="partner-card__logo-wrapper">
+							<svg class="partner-card__logo svg" width="81" height="81" role="img" aria-label="connectivity">
+								<use xlink:href="svg/sprite.svg#partners-connectivity" aria-hidden="true"></use>
+							</svg>
+						</div>
+						<div class="partner-card__body">
+							<div class="partner-card__text">
+								<h2 class="partner-card__title">
+									<a class="partner-card__link" href="#">Give With&nbsp;Us</a>
+								</h2>
+								<p class="partner-card__paragraph">A&nbsp;micro-donation platform created to&nbsp;allow people to&nbsp;donate
+									as&nbsp;little as&nbsp;$1&nbsp;to&nbsp;any charity that they care about.
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+{% endblock %}

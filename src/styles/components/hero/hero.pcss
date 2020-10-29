@@ -1,0 +1,251 @@
+.section_hero {
+	position: relative;
+
+	padding-top: calc(128px + 102px);
+	padding-bottom: 78px;
+
+	background: radial-gradient(at bottom, #6a82d6, #434f8b),
+				#5767b1;
+	@media (--desktop-medium) {
+		padding-top: calc(118px + 82px);
+		padding-bottom: 58px;
+	}
+	@media (--tablet) {
+		padding-top: calc(100px + 15px);
+		padding-bottom: 38px;
+	}
+	@media (--phone) {
+		padding-top: calc(70px + 10px);
+		padding-bottom: 30px;
+	}
+}
+
+.section_hero_high {
+	height: 100vh;
+	min-height: 425px;
+}
+
+.section_hero_main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: calc(128px - 20px);
+	padding-bottom: 0;
+
+	background: radial-gradient(at bottom, #7578c9, #4d4f78),
+				#7578c9;
+	&::after { /* При множественных фонах полифил для image-set плохо работает */
+		position: absolute;
+		right: 5.1vw;
+		bottom: 0;
+		z-index: 1;
+
+		width: 847px;
+		height: 672px;
+
+		background: image-set(url("../images/header-globe.png") 1x, url("../images/header-globe@2x.png") 2x) no-repeat;
+		background-size: 847px 672px;
+
+		pointer-events: none;
+		content: "";
+	}
+	@media (--desktop-medium) {
+		padding-top: calc(118px - 20px);
+		&::after {
+			right: 4vw;
+
+			width: 697px;
+			height: 553px;
+
+			background-size: 697px 553px;
+		}
+	}
+	@media (--tablet) {
+		padding-top: calc(100px - 20px);
+		&::after {
+			right: 40px;
+
+			width: 510px;
+			height: 405px;
+
+			background-size: 510px 405px;
+		}
+	}
+	@media (--phone) {
+		padding-top: calc(70px - 10px);
+		&::after {
+			right: 20px;
+
+			width: 300px;
+			height: 238px;
+
+			background-size: 300px 238px;
+		}
+	}
+}
+
+.hero__content {
+	position: relative;
+	z-index: 5;
+
+	text-align: center;
+}
+
+.section_hero_main .hero__content {
+	width: 50%;
+
+	text-align: left;
+	@media (--tablet) {
+		width: 100%;
+	}
+}
+
+.hero__title {
+	margin-bottom: 64px;
+
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 36px;
+	&::after {
+		display: block;
+		width: 65px;
+		height: 12px;
+		margin: 0 auto;
+		margin-top: 31px;
+
+		background-color: var(--color-line-background);
+		border: none;
+		border-radius: 6px;
+		content: "";
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	@media (--desktop-medium) {
+		margin-bottom: 44px;
+
+		font-size: 32px;
+	}
+	@media (--tablet) {
+		& br {
+			display: none;
+		}
+	}
+	@media (--phone) {
+		margin-bottom: 34px;
+
+		font-size: 30px;
+		&::after {
+			margin-top: 21px;
+		}
+	}
+}
+
+.section_hero_main .hero__title {
+	font-size: 44px;
+	line-height: 54px;
+	letter-spacing: -0.5px;
+	&::after {
+		margin-left: 0;
+	}
+	@media (--desktop-medium) {
+		font-size: 38px;
+		line-height: normal;
+		letter-spacing: normal;
+	}
+	@media (--phone) {
+		font-size: 36px;
+	}
+}
+
+/* margin-top == transform: translate(0, 145px); == padding-top у следующего после hero блока */
+/* margin-bottom == padding-bottom у hero - прижать hero__text к низу hero*/
+.hero__text {
+	margin-top: -145px;
+	margin-bottom: -78px;
+	padding: 80px 100px;
+
+	background-color: #ffffff;
+	box-shadow: 7px 22px 43px 0 rgba(43, 46, 54, 0.2);
+
+	transform: translate(0, 145px);
+	@media (--desktop-medium) {
+		margin-top: -111px;
+		margin-bottom: -58px;
+		padding: 60px 80px;
+
+		transform: translate(0, 111px);
+	}
+	@media (--tablet) {
+		margin-top: -80px;
+		margin-bottom: -38px;
+		padding: 40px 60px;
+
+		transform: translate(0, 80px);
+	}
+	@media (--phone) {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 0;
+
+		background-color: transparent;
+		box-shadow: none;
+
+		transform: translate(0, 0);
+	}
+}
+
+.hero__text_narrow {
+	margin: 0 10.2vw;
+	margin-top: -145px;
+	margin-bottom: -78px;
+	@media (--desktop-large) {
+		margin: 0 197px;
+		margin-top: -145px;
+		margin-bottom: -78px;
+	}
+	@media (--desktop-medium) {
+		margin: 0 7vw;
+		margin-top: -111px;
+		margin-bottom: -58px;
+	}
+	@media (--tablet) {
+		margin: 0;
+		margin-top: -80px;
+		margin-bottom: -38px;
+	}
+	@media (--phone) {
+		margin: 0;
+	}
+}
+
+.hero__paragraph {
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 25px;
+	line-height: 30px;
+	&:not(:last-child) {
+		margin-bottom: 82px;
+	}
+	@media (--desktop-medium) {
+		font-size: 22px;
+		line-height: normal;
+		&:not(:last-child) {
+			margin-bottom: 62px;
+		}
+	}
+	@media (--phone) {
+		font-size: 20px;
+		&:not(:last-child) {
+			margin-bottom: 52px;
+		}
+	}
+}
+
+.hero__text .hero__paragraph {
+	color: var(--color-typo-secondary);
+	@media (--phone) {
+		color: #ffffff;
+	}
+}

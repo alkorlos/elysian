@@ -1,0 +1,133 @@
+.form__elements {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 33px 220px;
+	margin-bottom: 33px;
+	@media (--desktop-medium) {
+		gap: 28px 100px;
+		margin-bottom: 28px;
+	}
+	@media (--tablet) {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px 0;
+		margin-bottom: 20px;
+	}
+}
+
+.form__label {
+	display: block;
+	margin-bottom: 29px;
+	margin-left: 16px;
+
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 24px;
+	@media (--desktop-medium) {
+		margin-bottom: 20px;
+
+		font-size: 22px;
+	}
+	@media (--tablet) {
+		margin-bottom: 15px;
+	}
+	@media (--phone) {
+		font-size: 20px;
+	}
+}
+
+.form__input {
+	width: 100%;
+	padding: 12px 35px;
+
+	color: var(--color-typo-primary);
+	font-weight: 300;
+	font-size: 22px;
+	font-family: inherit;
+
+	background-color: #ffffff;
+	border: 1px solid transparent;
+	border-radius: 26px;
+	outline: 0;
+	&::placeholder {
+		color: var(--color-typo-placeholder);
+
+		opacity: 1;
+	}
+	@media (--tablet) {
+		padding: 12px 20px;
+	}
+	@media (--phone) {
+		font-size: 18px;
+	}
+}
+
+.form__element_error .form__input {
+	color: var(--color-warning);
+
+	border: 1px solid var(--color-warning);
+	&::placeholder {
+		color: var(--color-warning);
+	}
+}
+
+.form__textarea {
+	width: 100%;
+	height: 166px;
+	margin-bottom: 33px;
+	padding: 12px 35px;
+
+	color: var(--color-typo-primary);
+	font-weight: 300;
+	font-size: 22px;
+	font-family: inherit;
+
+	background-color: #ffffff;
+	border: none;
+	border-radius: 26px;
+	outline: 0;
+
+	resize: none;
+	&::placeholder {
+		color: var(--color-typo-placeholder);
+
+		opacity: 1;
+	}
+	@media (--desktop-medium) {
+		margin-bottom: 28px;
+	}
+	@media (--tablet) {
+		margin-bottom: 20px;
+		padding: 12px 20px;
+	}
+	@media (--phone) {
+		font-size: 18px;
+	}
+}
+
+.form__button {
+	margin-left: auto;
+}
+
+.form__button_hidden {
+	display: none;
+}
+
+.form__message {
+	display: none;
+	margin-left: auto;
+
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 28px;
+	text-align: right;
+	@media (--desktop-medium) {
+		font-size: 26px;
+	}
+	@media (--phone) {
+		font-size: 24px;
+	}
+}
+
+.form__message_visible {
+	display: block;
+}

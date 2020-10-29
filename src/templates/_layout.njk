@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Description" content="We build software for your business">
+
+		<title>Elysian</title>
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link href="css/style.min.css" rel="stylesheet">
+
+		<link href="fonts/Nexa-Light.woff2" type="font/woff2" rel="preload" as="font" crossorigin>
+
+		<style>
+			@font-face {
+				font-weight: 300;
+				font-family: "nexa";
+				font-style: normal;
+				font-display: swap;
+				src: url("fonts/Nexa-Light.woff2") format("woff2");
+			}
+		</style>
+	</head>
+
+	<body>
+		{% include "_inspections.njk" %}
+
+		<div class="wrapper">
+			{# Header #}
+			{% include "components/_header.njk" %}
+
+			{% block inspection %} {% endblock %}
+
+			{% block content %} {% endblock %}
+
+			{# Footer #}
+			{% include "components/_footer.njk" %}
+		</div>
+
+		{# Scripts #}
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

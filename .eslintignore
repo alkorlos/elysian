@@ -1,0 +1,12 @@
+# Folders
+dist
+
+# Bundler config
+gulp
+.eslintrc.js
+gulpfile.js
+postcss.config.js
+stylelint.config.js
+stylelint.config.rational-order.js
+webpack.config.js
+webpack.config.min.js

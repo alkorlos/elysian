@@ -1,0 +1,219 @@
+.section_persons {
+	padding-top: 73px;
+	padding-bottom: 115px;
+	@media (--desktop-medium) {
+		padding-top: 53px;
+		padding-bottom: 75px;
+	}
+	@media (--tablet) {
+		padding-top: 33px;
+		padding-bottom: 55px;
+	}
+	@media (--phone) {
+		padding-top: 30px;
+		padding-bottom: 35px;
+	}
+}
+
+.persons-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+	gap: 121px 55px;
+	padding: 0 20px;
+	@media (--desktop-medium) {
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		gap: 101px 36px;
+	}
+	@media (--tablet) {
+		gap: 81px 36px;
+	}
+	@media (--phone-large) {
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 61px 36px;
+		padding: 0;
+	}
+}
+
+.person-card {
+	box-shadow: 7.1px 21.9px 43px 0 rgba(43, 46, 54, 0.2);
+}
+
+.person-card__picture {
+	display: block;
+	height: calc(437px + 8px);
+
+	background-color: #7579c9;
+	@media (--desktop-medium) {
+		height: calc(397px + 8px);
+	}
+	@media (--tablet) {
+		height: calc(357px + 8px);
+	}
+	@media (--phone) {
+		height: calc(317px + 8px);
+	}
+}
+
+.person-card__image {
+	display: block;
+	width: 100%;
+	height: 437px;
+
+	object-fit: cover;
+	@media (--desktop-medium) {
+		height: 397px;
+	}
+	@media (--tablet) {
+		height: 357px;
+	}
+	@media (--phone) {
+		height: 317px;
+	}
+}
+
+.person-card__logo-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 118px;
+	height: 118px;
+	margin: 0 auto;
+	margin-bottom: calc(-51px + 27px);
+
+	background-color: #7579c9;
+	border-radius: 50%;
+
+	transform: translate(0, -51px);
+	@media (--desktop-medium) {
+		width: 78px;
+		height: 78px;
+		margin-bottom: calc(-40px + 20px);
+
+		transform: translate(0, -40px);
+	}
+	@media (--tablet) {
+		width: 58px;
+		height: 58px;
+		margin-bottom: calc(-30px + 15px);
+
+		transform: translate(0, -30px);
+	}
+}
+
+.person-card__logo {
+	width: 67px;
+	height: 67px;
+
+	fill: #ffffff;
+	@media (--desktop-medium) {
+		width: 47px;
+		height: 47px;
+	}
+	@media (--tablet) {
+		width: 32px;
+		height: 32px;
+	}
+}
+
+.person-card__body {
+	padding: 0 40px;
+	padding-bottom: 70px;
+	@media (--desktop-medium) {
+		padding: 0 30px;
+		padding-bottom: 50px;
+	}
+	@media (--tablet) {
+		padding: 0 10px;
+		padding-bottom: 20px;
+	}
+}
+
+.person-card__text {
+	text-align: center;
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+
+.person-card__title {
+	margin-bottom: 4px;
+
+	color: var(--color-typo-secondary);
+	font-weight: 700;
+	font-size: 32px;
+	@media (--desktop-medium) {
+		font-size: 30px;
+	}
+	@media (--phone) {
+		font-size: 28px;
+	}
+}
+
+.person-card__title_footer {
+	margin-bottom: 25px;
+
+	font-size: 23px;
+	@media (--desktop-medium) {
+		margin-bottom: 20px;
+
+		font-size: 21px;
+	}
+	@media (--phone) {
+		margin-bottom: 15px;
+
+		font-size: 20px;
+	}
+}
+
+.person-card__subtitle {
+	margin-bottom: 15px;
+
+	color: #7579c9;
+	font-weight: 700;
+	font-size: 22px;
+	@media (--desktop-medium) {
+		margin-bottom: 10px;
+
+		font-size: 20px;
+	}
+	@media (--phone) {
+		font-size: 19px;
+	}
+}
+
+.person-card__paragraph {
+	color: var(--color-typo-secondary);
+	font-weight: 300;
+	font-size: 20px;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	@media (--desktop-medium) {
+		font-size: 19px;
+	}
+	@media (--phone) {
+		font-size: 18px;
+	}
+}
+
+.person-card__footer {
+	text-align: center;
+}
+
+.person-card__colleagues {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: -10px;
+	padding: 0 20px;
+}
+
+.person-card__colleague {
+	width: 47px;
+	height: 47px;
+	margin: 0 10px;
+	margin-bottom: 10px;
+
+	background-color: #d7d7d7;
+	border-radius: 50%;
+}
